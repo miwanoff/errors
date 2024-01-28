@@ -19,7 +19,7 @@
 //     error_log("Hello, errors!"." E_USER_ERROR $errno: $errstr "."Error in str $errline в $errfile\n");
 //   }
 
-  ini_set("error_log", "tmp\php-error.log");
+ini_set("error_log", "tmp\php-error.log");
 //   // Регистрация пользовательской функции-обработчика
 //   set_error_handler("myErrorHandler");
 
@@ -67,38 +67,21 @@
 //     echo "Вышли из функции " . __METHOD__ . "\n";
 // }
 
-// function reciprocal($x)
-// {
-//     if ($x == 0) {
-//         throw new Exception();
-//     }
-//     return 1 / $x;
-// }
+function reciprocal($x)
+{
+    if ($x == 0) {
+        throw new Exception();
+    }
+    return 1 / $x;
+}
 
-// try {
-//     $x = 3;
-//     $y = reciprocal($x);
-//     echo $y;
-// } catch (Exception $ex) {
-//     echo "Error!"; //Error!
-// }
-
-// reciprocal(3);
-
-// function exception_error_handler($errno, $errstr, $errfile, $errline ) {
-//     //throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
-//     echo $errno;
-// }
-
-// set_error_handler("exception_error_handler");
-
-/* вызываем исключение */
-//try {
-//    strpos();
-// }
-// catch(ErrorException $e){
-//     echo "Error!";
-// }
+try {
+    $x = 0;
+    $y = reciprocal($x);
+    echo $y;
+} catch (Exception $ex) {
+    echo "Error! x == 0\n"; //Error!
+}
 
 // Пользовательская функция-обработчик
 function myErrorHandler($errno, $msg, $errfile, $errline)
@@ -115,6 +98,6 @@ set_error_handler("myErrorHandler", E_ALL);
 try {
     filemtime("spoon");
 } catch (ErrorException $e) {
-    echo "Error!" . $e;
+    echo "Error!\n" . $e;
     error_log("Errors!" . $e);
 }
