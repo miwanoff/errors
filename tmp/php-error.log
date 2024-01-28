@@ -7,3 +7,18 @@ Stack trace:
 #0 [internal function]: myErrorHandler(2, 'filemtime(): st...', 'C:\\xampp\\htdocs...', 116)
 #1 C:\xampp\htdocs\projects-2023\errors\index.php(116): filemtime('spoon')
 #2 {main}
+[28-Jan-2024 15:34:58 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: strpos() expects at least 2 arguments, 0 given in C:\xampp\htdocs\projects-2023\errors\index.php:116
+Stack trace:
+#0 C:\xampp\htdocs\projects-2023\errors\index.php(116): strpos()
+#1 {main}
+  thrown in C:\xampp\htdocs\projects-2023\errors\index.php on line 116
+[28-Jan-2024 15:37:08 Europe/Berlin] Errors!ErrorException: filemtime(): stat failed for spoon in C:\xampp\htdocs\projects-2023\errors\index.php:116
+Stack trace:
+#0 [internal function]: myErrorHandler(2, 'filemtime(): st...', 'C:\\xampp\\htdocs...', 116)
+#1 C:\xampp\htdocs\projects-2023\errors\index.php(116): filemtime('spoon')
+#2 {main}
+[28-Jan-2024 15:37:31 Europe/Berlin] Errors!ErrorException: filemtime(): stat failed for spoon in C:\xampp\htdocs\projects-2023\errors\index.php:116
+Stack trace:
+#0 [internal function]: myErrorHandler(2, 'filemtime(): st...', 'C:\\xampp\\htdocs...', 116)
+#1 C:\xampp\htdocs\projects-2023\errors\index.php(116): filemtime('spoon')
+#2 {main}

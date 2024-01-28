@@ -19,7 +19,7 @@
 //     error_log("Hello, errors!"." E_USER_ERROR $errno: $errstr "."Error in str $errline в $errfile\n");
 //   }
 
-ini_set("error_log", "tmp\php-error.log");
+  ini_set("error_log", "tmp\php-error.log");
 //   // Регистрация пользовательской функции-обработчика
 //   set_error_handler("myErrorHandler");
 
