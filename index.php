@@ -19,7 +19,7 @@
 //     error_log("Hello, errors!"." E_USER_ERROR $errno: $errstr "."Error in str $errline в $errfile\n");
 //   }
 
-//   ini_set("error_log", "tmp\php-error.log");
+ini_set("error_log", "tmp\php-error.log");
 //   // Регистрация пользовательской функции-обработчика
 //   set_error_handler("myErrorHandler");
 
@@ -115,5 +115,6 @@ set_error_handler("myErrorHandler", E_ALL);
 try {
     filemtime("spoon");
 } catch (ErrorException $e) {
-    echo "Error!". $e;
+    echo "Error!" . $e;
+    error_log("Errors!" . $e);
 }

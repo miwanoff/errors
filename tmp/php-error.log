@@ -2,3 +2,8 @@
 
 [28-Jan-2024 15:05:31 Europe/Berlin] Hello, errors! E_USER_ERROR 256: Пользовательская ошибка! Error in str 29 в C:\xampp\htdocs\projects-2023\errors\index.php
 
+[28-Jan-2024 15:31:42 Europe/Berlin] Errors!ErrorException: filemtime(): stat failed for spoon in C:\xampp\htdocs\projects-2023\errors\index.php:116
+Stack trace:
+#0 [internal function]: myErrorHandler(2, 'filemtime(): st...', 'C:\\xampp\\htdocs...', 116)
+#1 C:\xampp\htdocs\projects-2023\errors\index.php(116): filemtime('spoon')
+#2 {main}
